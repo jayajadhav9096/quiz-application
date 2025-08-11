@@ -1,0 +1,56 @@
+<ng-container *ngIf="quizList.length > 0">
+    <div class="container mt-4 border rounded">
+        <table class="table align-middle mb-0 bg-white caption-top">
+            <caption class="text-center"><h2>ATTEMPTED TEST LIST</h2></caption>
+            <thead class="bg-light">
+                <tr>
+                    <th>Name</th>
+                    <th>Category | Sub-Category </th>
+                    <th>Level</th>
+                    <th>Score</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let quiz of quizList">
+                    <td>
+                        <div class="d-flex align-items-center">
+                            <img src="https://mdbootstrap.com/img/new/avatars/8.jpg" alt=""
+                                style="width: 45px; height: 45px" class="rounded-circle" />
+                            <div class="ms-3">
+                                <p class="text-muted mb-0">000{{ quiz.userId }}</p>
+                                <p class="fw-bold mb-1">{{ quiz?.name }}</p>
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <p class="fw-normal mb-1">{{ quiz.category}}</p>
+                        <p class="text-muted mb-0">{{ quiz.subCategory}}</p>
+                    </td>
+                    <td>
+                        <button class="btn btn-secondary">{{ quiz.level }}</button>
+                    </td>
+                    <td>
+                        {{ quiz.score }}</td>
+                    <td>
+                        <button type="button" class="btn btn-sm btn-rounded btn-primary mx-2 text-center"
+                            [routerLink]="'/view/' + quiz.id">
+                            Review Result
+                        </button>
+                        <button type="button" class="btn btn-sm btn-rounded btn-danger text-center"
+                            (click)="deleteQuizResult(quiz.id)">
+                            Delete Result
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</ng-container>
+
+<ng-container *ngIf="quizList.length === 0">
+    <div class="container border rounded mt-4 text-center">
+        <h2>Welcome!</h2>
+        <h4>You haven't attempted any tests yet. Ready to challenge yourself?</h4>
+    </div>
+</ng-container>

@@ -1,0 +1,34 @@
+<div class="container col-md-5 mt-4">
+    <form [formGroup]="categoriesForm" (ngSubmit)="startQuizz()">
+        <div class="dropdown">
+            <label for="category">Select Category</label>
+            <select class="form-select form-select-lg mb-3" aria-label="Default select example"
+                formControlName="category">
+                <option value="">Select Category</option>
+                <option *ngFor="let category of categoryList" [value]="category.category">{{category.category | uppercase}}</option>
+            </select>
+        </div>
+
+        <div class="dropdown">
+            <label for="subcategory">Select Sub-Category</label>
+            <select class="form-select form-select-lg mb-3" aria-label="Default select example"
+                formControlName="subcategory">
+                <option value="">Select Sub-category</option>
+                <option *ngFor="let subcat of subCategoryList" [value]="subcat">{{subcat | uppercase}}</option>
+            </select>
+        </div>
+
+        <div class="dropdown">
+            <label for="quizlevel">Select Level</label>
+            <select class="form-select form-select-lg mb-3" aria-label="Default select example" formControlName="level">
+                <option value="">Select Level</option>
+                <option *ngFor="let level of difficultyLevels" [value]="level">
+                    {{ level | uppercase }}
+                </option>
+            </select>
+        </div>
+
+        <button class="btn btn-primary text-center" [disabled]="categoriesForm.invalid">START QUIZZ</button>
+    </form>
+
+</div>

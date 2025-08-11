@@ -1,0 +1,362 @@
+[
+  {
+    "questionId": 0,
+    "answer": "Hyper Text Markup Language"
+  },
+  {
+    "questionId": 1,
+    "answer": "<a>"
+  },
+  {
+    "questionId": 2,
+    "answer": "<img>"
+  },
+  {
+    "questionId": 3,
+    "answer": "<br>"
+  },
+  {
+    "questionId": 4,
+    "answer": "<ul>"
+  },
+  {
+    "questionId": 5,
+    "answer": "<tr>"
+  },
+  {
+    "questionId": 6,
+    "answer": "<input type='checkbox'>"
+  },
+  {
+    "questionId": 7,
+    "answer": "<p>"
+  },
+  {
+    "questionId": 8,
+    "answer": "title"
+  },
+  {
+    "questionId": 9,
+    "answer": "<h1>"
+  },
+  {
+    "questionId": 10,
+    "answer": "<form>"
+  },
+  {
+    "questionId": 11,
+    "answer": "<select>"
+  },
+  {
+    "questionId": 12,
+    "answer": "<caption>"
+  },
+  {
+    "questionId": 13,
+    "answer": "<td>"
+  },
+  {
+    "questionId": 14,
+    "answer": "<th>"
+  },
+  {
+    "questionId": 15,
+    "answer": "<video>"
+  },
+  {
+    "questionId": 16,
+    "answer": "<audio>"
+  },
+  {
+    "questionId": 17,
+    "answer": "<nav>"
+  },
+  {
+    "questionId": 18,
+    "answer": "<footer>"
+  },
+  {
+    "questionId": 19,
+    "answer": "<section>"
+  },
+  {
+    "questionId": 20,
+    "answer": "<meta>"
+  },
+  {
+    "questionId": 21,
+    "answer": "<script>"
+  },
+  {
+    "questionId": 22,
+    "answer": "<style>"
+  },
+  {
+    "questionId": 23,
+    "answer": "<canvas>"
+  },
+  {
+    "questionId": 24,
+    "answer": "<svg>"
+  },
+  {
+    "questionId": 25,
+    "answer": "<dialog>"
+  },
+  {
+    "questionId": 26,
+    "answer": "<progress>"
+  },
+  {
+    "questionId": 27,
+    "answer": "<meter>"
+  },
+  {
+    "questionId": 28,
+    "answer": "<template>"
+  },
+  {
+    "questionId": 29,
+    "answer": "<figcaption>"
+  },
+  {
+    "questionId": 30,
+    "answer": "Cascading Style Sheets"
+  },
+  {
+    "questionId": 31,
+    "answer": "background-color"
+  },
+  {
+    "questionId": 32,
+    "answer": "color"
+  },
+  {
+    "questionId": 33,
+    "answer": "font-size"
+  },
+  {
+    "questionId": 34,
+    "answer": "font-weight"
+  },
+  {
+    "questionId": 35,
+    "answer": "text-align"
+  },
+  {
+    "questionId": 36,
+    "answer": "padding"
+  },
+  {
+    "questionId": 37,
+    "answer": "margin"
+  },
+  {
+    "questionId": 38,
+    "answer": "width"
+  },
+  {
+    "questionId": 39,
+    "answer": "height"
+  },
+  {
+    "questionId": 40,
+    "answer": "border"
+  },
+  {
+    "questionId": 41,
+    "answer": "box-shadow"
+  },
+  {
+    "questionId": 42,
+    "answer": "font-family"
+  },
+  {
+    "questionId": 43,
+    "answer": "line-height"
+  },
+  {
+    "questionId": 44,
+    "answer": "letter-spacing"
+  },
+  {
+    "questionId": 45,
+    "answer": "visibility"
+  },
+  {
+    "questionId": 46,
+    "answer": "display: none"
+  },
+  {
+    "questionId": 47,
+    "answer": "float"
+  },
+  {
+    "questionId": 48,
+    "answer": "position"
+  },
+  {
+    "questionId": 49,
+    "answer": "z-index"
+  },
+  {
+    "questionId": 50,
+    "answer": "display: grid"
+  },
+  {
+    "questionId": 51,
+    "answer": "display: flex"
+  },
+  {
+    "questionId": 52,
+    "answer": "transition"
+  },
+  {
+    "questionId": 53,
+    "answer": "animation"
+  },
+  {
+    "questionId": 54,
+    "answer": "transform"
+  },
+  {
+    "questionId": 55,
+    "answer": "opacity"
+  },
+  {
+    "questionId": 56,
+    "answer": "clip-path"
+  },
+  {
+    "questionId": 57,
+    "answer": "filter"
+  },
+  {
+    "questionId": 58,
+    "answer": "perspective"
+  },
+  {
+    "questionId": 59,
+    "answer": "backface-visibility"
+  },
+  {
+    "questionId": 60,
+    "answer": "Web development"
+  },
+  {
+    "questionId": 61,
+    "answer": "var"
+  },
+  {
+    "questionId": 62,
+    "answer": "//"
+  },
+  {
+    "questionId": 63,
+    "answer": "console.log()"
+  },
+  {
+    "questionId": 64,
+    "answer": "+"
+  },
+  {
+    "questionId": 65,
+    "answer": "=="
+  },
+  {
+    "questionId": 66,
+    "answer": "function"
+  },
+  {
+    "questionId": 67,
+    "answer": "toUpperCase()"
+  },
+  {
+    "questionId": 68,
+    "answer": "length"
+  },
+  {
+    "questionId": 69,
+    "answer": "push()"
+  },
+  {
+    "questionId": 70,
+    "answer": "const"
+  },
+  {
+    "questionId": 71,
+    "answer": "pop()"
+  },
+  {
+    "questionId": 72,
+    "answer": "shift()"
+  },
+  {
+    "questionId": 73,
+    "answer": "join()"
+  },
+  {
+    "questionId": 74,
+    "answer": "sort()"
+  },
+  {
+    "questionId": 75,
+    "answer": "reverse()"
+  },
+  {
+    "questionId": 76,
+    "answer": "indexOf()"
+  },
+  {
+    "questionId": 77,
+    "answer": "includes()"
+  },
+  {
+    "questionId": 78,
+    "answer": "slice()"
+  },
+  {
+    "questionId": 79,
+    "answer": "filter()"
+  },
+  {
+    "questionId": 80,
+    "answer": "map()"
+  },
+  {
+    "questionId": 81,
+    "answer": "reduce()"
+  },
+  {
+    "questionId": 82,
+    "answer": "find()"
+  },
+  {
+    "questionId": 83,
+    "answer": "every()"
+  },
+  {
+    "questionId": 84,
+    "answer": "some()"
+  },
+  {
+    "questionId": 85,
+    "answer": "bind()"
+  },
+  {
+    "questionId": 86,
+    "answer": "call()"
+  },
+  {
+    "questionId": 87,
+    "answer": "apply()"
+  },
+  {
+    "questionId": 88,
+    "answer": "class"
+  },
+  {
+    "questionId": 89,
+    "answer": "new"
+  }
+]

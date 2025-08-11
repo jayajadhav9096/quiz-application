@@ -1,0 +1,1172 @@
+[
+  {
+    "questionId": 0,
+    "question": "What does HTML stand for?",
+    "category": "Programming Language",
+    "subCategory": "HTML",
+    "level": "easy",
+    "options": [
+      "Hyper Text Markup Language",
+      "Home Tool Markup Language",
+      "Hyperlinks and Text Markup Language",
+      "Hyperlinking Text Management Language"
+    ]
+  },
+  {
+    "questionId": 1,
+    "question": "Which tag is used to create a hyperlink in HTML?",
+    "category": "Programming Language",
+    "subCategory": "HTML",
+    "level": "easy",
+    "options": [
+      "<a>",
+      "<link>",
+      "<href>",
+      "<hyper>"
+    ]
+  },
+  {
+    "questionId": 2,
+    "question": "Which tag is used to insert an image in HTML?",
+    "category": "Programming Language",
+    "subCategory": "HTML",
+    "level": "easy",
+    "options": [
+      "<img>",
+      "<image>",
+      "<src>",
+      "<pic>"
+    ]
+  },
+  {
+    "questionId": 3,
+    "question": "What is the correct HTML element for inserting a line break?",
+    "category": "Programming Language",
+    "subCategory": "HTML",
+    "level": "easy",
+    "options": [
+      "<br>",
+      "<lb>",
+      "<break>",
+      "<newline>"
+    ]
+  },
+  {
+    "questionId": 4,
+    "question": "Which HTML tag is used to define an unordered list?",
+    "category": "Programming Language",
+    "subCategory": "HTML",
+    "level": "easy",
+    "options": [
+      "<ul>",
+      "<ol>",
+      "<li>",
+      "<list>"
+    ]
+  },
+  {
+    "questionId": 5,
+    "question": "Which tag is used to define a table row in HTML?",
+    "category": "Programming Language",
+    "subCategory": "HTML",
+    "level": "easy",
+    "options": [
+      "<tr>",
+      "<td>",
+      "<th>",
+      "<row>"
+    ]
+  },
+  {
+    "questionId": 6,
+    "question": "What is the correct HTML for creating a checkbox?",
+    "category": "Programming Language",
+    "subCategory": "HTML",
+    "level": "easy",
+    "options": [
+      "<input type='checkbox'>",
+      "<checkbox>",
+      "<input checkbox>",
+      "<check>"
+    ]
+  },
+  {
+    "questionId": 7,
+    "question": "Which tag is used to define a paragraph in HTML?",
+    "category": "Programming Language",
+    "subCategory": "HTML",
+    "level": "easy",
+    "options": [
+      "<p>",
+      "<para>",
+      "<paragraph>",
+      "<text>"
+    ]
+  },
+  {
+    "questionId": 8,
+    "question": "Which attribute is used to provide a tooltip in HTML?",
+    "category": "Programming Language",
+    "subCategory": "HTML",
+    "level": "easy",
+    "options": [
+      "title",
+      "alt",
+      "tooltip",
+      "info"
+    ]
+  },
+  {
+    "questionId": 9,
+    "question": "Which tag is used to define the largest heading in HTML?",
+    "category": "Programming Language",
+    "subCategory": "HTML",
+    "level": "easy",
+    "options": [
+      "<h1>",
+      "<heading>",
+      "<head>",
+      "<h6>"
+    ]
+  },
+  {
+    "questionId": 10,
+    "question": "Which HTML tag is used to define a form?",
+    "category": "Programming Language",
+    "subCategory": "HTML",
+    "level": "medium",
+    "options": [
+      "<form>",
+      "<input>",
+      "<submit>",
+      "<fieldset>"
+    ]
+  },
+  {
+    "questionId": 11,
+    "question": "Which tag is used to define a drop-down list?",
+    "category": "Programming Language",
+    "subCategory": "HTML",
+    "level": "medium",
+    "options": [
+      "<select>",
+      "<dropdown>",
+      "<list>",
+      "<option>"
+    ]
+  },
+  {
+    "questionId": 12,
+    "question": "Which tag is used to define a caption for a table?",
+    "category": "Programming Language",
+    "subCategory": "HTML",
+    "level": "medium",
+    "options": [
+      "<caption>",
+      "<title>",
+      "<head>",
+      "<label>"
+    ]
+  },
+  {
+    "questionId": 13,
+    "question": "Which tag is used to define a cell in a table?",
+    "category": "Programming Language",
+    "subCategory": "HTML",
+    "level": "medium",
+    "options": [
+      "<td>",
+      "<tr>",
+      "<th>",
+      "<cell>"
+    ]
+  },
+  {
+    "questionId": 14,
+    "question": "Which tag is used to define a header cell in a table?",
+    "category": "Programming Language",
+    "subCategory": "HTML",
+    "level": "medium",
+    "options": [
+      "<th>",
+      "<td>",
+      "<tr>",
+      "<header>"
+    ]
+  },
+  {
+    "questionId": 15,
+    "question": "Which tag is used to embed a video in HTML?",
+    "category": "Programming Language",
+    "subCategory": "HTML",
+    "level": "medium",
+    "options": [
+      "<video>",
+      "<media>",
+      "<movie>",
+      "<embed>"
+    ]
+  },
+  {
+    "questionId": 16,
+    "question": "Which tag is used to embed audio in HTML?",
+    "category": "Programming Language",
+    "subCategory": "HTML",
+    "level": "medium",
+    "options": [
+      "<audio>",
+      "<sound>",
+      "<media>",
+      "<embed>"
+    ]
+  },
+  {
+    "questionId": 17,
+    "question": "Which tag is used to define a navigation section?",
+    "category": "Programming Language",
+    "subCategory": "HTML",
+    "level": "medium",
+    "options": [
+      "<nav>",
+      "<menu>",
+      "<navigation>",
+      "<section>"
+    ]
+  },
+  {
+    "questionId": 18,
+    "question": "Which tag is used to define a footer for a document?",
+    "category": "Programming Language",
+    "subCategory": "HTML",
+    "level": "medium",
+    "options": [
+      "<footer>",
+      "<bottom>",
+      "<foot>",
+      "<section>"
+    ]
+  },
+  {
+    "questionId": 19,
+    "question": "Which tag is used to define a section in a document?",
+    "category": "Programming Language",
+    "subCategory": "HTML",
+    "level": "medium",
+    "options": [
+      "<section>",
+      "<div>",
+      "<article>",
+      "<part>"
+    ]
+  },
+  {
+    "questionId": 20,
+    "question": "Which tag is used to define metadata about an HTML document?",
+    "category": "Programming Language",
+    "subCategory": "HTML",
+    "level": "hard",
+    "options": [
+      "<meta>",
+      "<head>",
+      "<data>",
+      "<info>"
+    ]
+  },
+  {
+    "questionId": 21,
+    "question": "Which tag is used to define a script in HTML?",
+    "category": "Programming Language",
+    "subCategory": "HTML",
+    "level": "hard",
+    "options": [
+      "<script>",
+      "<js>",
+      "<javascript>",
+      "<code>"
+    ]
+  },
+  {
+    "questionId": 22,
+    "question": "Which tag is used to define a style in HTML?",
+    "category": "Programming Language",
+    "subCategory": "HTML",
+    "level": "hard",
+    "options": [
+      "<style>",
+      "<css>",
+      "<design>",
+      "<format>"
+    ]
+  },
+  {
+    "questionId": 23,
+    "question": "Which tag is used to define a canvas in HTML?",
+    "category": "Programming Language",
+    "subCategory": "HTML",
+    "level": "hard",
+    "options": [
+      "<canvas>",
+      "<draw>",
+      "<paint>",
+      "<graphic>"
+    ]
+  },
+  {
+    "questionId": 24,
+    "question": "Which tag is used to define scalable vector graphics?",
+    "category": "Programming Language",
+    "subCategory": "HTML",
+    "level": "hard",
+    "options": [
+      "<svg>",
+      "<vector>",
+      "<graphics>",
+      "<shape>"
+    ]
+  },
+  {
+    "questionId": 25,
+    "question": "Which tag is used to define a dialog box?",
+    "category": "Programming Language",
+    "subCategory": "HTML",
+    "level": "hard",
+    "options": [
+      "<dialog>",
+      "<popup>",
+      "<box>",
+      "<modal>"
+    ]
+  },
+  {
+    "questionId": 26,
+    "question": "Which tag is used to define a progress bar?",
+    "category": "Programming Language",
+    "subCategory": "HTML",
+    "level": "hard",
+    "options": [
+      "<progress>",
+      "<bar>",
+      "<meter>",
+      "<status>"
+    ]
+  },
+  {
+    "questionId": 27,
+    "question": "Which tag is used to define a meter?",
+    "category": "Programming Language",
+    "subCategory": "HTML",
+    "level": "hard",
+    "options": [
+      "<meter>",
+      "<progress>",
+      "<bar>",
+      "<range>"
+    ]
+  },
+  {
+    "questionId": 28,
+    "question": "Which tag is used to define a template?",
+    "category": "Programming Language",
+    "subCategory": "HTML",
+    "level": "hard",
+    "options": [
+      "<template>",
+      "<layout>",
+      "<design>",
+      "<structure>"
+    ]
+  },
+  {
+    "questionId": 29,
+    "question": "Which tag is used to define a figure caption?",
+    "category": "Programming Language",
+    "subCategory": "HTML",
+    "level": "hard",
+    "options": [
+      "<figcaption>",
+      "<caption>",
+      "<title>",
+      "<label>"
+    ]
+  },
+  {
+    "questionId": 30,
+    "question": "What does CSS stand for?",
+    "category": "Programming Language",
+    "subCategory": "CSS",
+    "level": "easy",
+    "options": [
+      "Cascading Style Sheets",
+      "Computer Style Sheets",
+      "Creative Style Sheets",
+      "Colorful Style Sheets"
+    ]
+  },
+  {
+    "questionId": 31,
+    "question": "Which property is used to change the background color?",
+    "category": "Programming Language",
+    "subCategory": "CSS",
+    "level": "easy",
+    "options": [
+      "background-color",
+      "color",
+      "bgcolor",
+      "background"
+    ]
+  },
+  {
+    "questionId": 32,
+    "question": "Which property is used to change the text color?",
+    "category": "Programming Language",
+    "subCategory": "CSS",
+    "level": "easy",
+    "options": [
+      "color",
+      "text-color",
+      "font-color",
+      "foreground"
+    ]
+  },
+  {
+    "questionId": 33,
+    "question": "Which property is used to change the font size?",
+    "category": "Programming Language",
+    "subCategory": "CSS",
+    "level": "easy",
+    "options": [
+      "font-size",
+      "text-size",
+      "size",
+      "font"
+    ]
+  },
+  {
+    "questionId": 34,
+    "question": "Which property is used to make text bold?",
+    "category": "Programming Language",
+    "subCategory": "CSS",
+    "level": "easy",
+    "options": [
+      "font-weight",
+      "bold",
+      "text-style",
+      "font-style"
+    ]
+  },
+  {
+    "questionId": 35,
+    "question": "Which property is used to align text to the center?",
+    "category": "Programming Language",
+    "subCategory": "CSS",
+    "level": "easy",
+    "options": [
+      "text-align",
+      "align",
+      "center",
+      "text-center"
+    ]
+  },
+  {
+    "questionId": 36,
+    "question": "Which property is used to add space inside an element?",
+    "category": "Programming Language",
+    "subCategory": "CSS",
+    "level": "easy",
+    "options": [
+      "padding",
+      "margin",
+      "spacing",
+      "border"
+    ]
+  },
+  {
+    "questionId": 37,
+    "question": "Which property is used to add space outside an element?",
+    "category": "Programming Language",
+    "subCategory": "CSS",
+    "level": "easy",
+    "options": [
+      "margin",
+      "padding",
+      "spacing",
+      "border"
+    ]
+  },
+  {
+    "questionId": 38,
+    "question": "Which property is used to set the width of an element?",
+    "category": "Programming Language",
+    "subCategory": "CSS",
+    "level": "easy",
+    "options": [
+      "width",
+      "size",
+      "element-width",
+      "box-width"
+    ]
+  },
+  {
+    "questionId": 39,
+    "question": "Which property is used to set the height of an element?",
+    "category": "Programming Language",
+    "subCategory": "CSS",
+    "level": "easy",
+    "options": [
+      "height",
+      "size",
+      "element-height",
+      "box-height"
+    ]
+  },
+  {
+    "questionId": 40,
+    "question": "Which property is used to set the border of an element?",
+    "category": "Programming Language",
+    "subCategory": "CSS",
+    "level": "medium",
+    "options": [
+      "border",
+      "outline",
+      "frame",
+      "edge"
+    ]
+  },
+  {
+    "questionId": 41,
+    "question": "Which property is used to set the shadow of an element?",
+    "category": "Programming Language",
+    "subCategory": "CSS",
+    "level": "medium",
+    "options": [
+      "box-shadow",
+      "shadow",
+      "element-shadow",
+      "text-shadow"
+    ]
+  },
+  {
+    "questionId": 42,
+    "question": "Which property is used to set the font family?",
+    "category": "Programming Language",
+    "subCategory": "CSS",
+    "level": "medium",
+    "options": [
+      "font-family",
+      "font",
+      "text-font",
+      "typeface"
+    ]
+  },
+  {
+    "questionId": 43,
+    "question": "Which property is used to set the line height?",
+    "category": "Programming Language",
+    "subCategory": "CSS",
+    "level": "medium",
+    "options": [
+      "line-height",
+      "height",
+      "text-height",
+      "spacing"
+    ]
+  },
+  {
+    "questionId": 44,
+    "question": "Which property is used to set the letter spacing?",
+    "category": "Programming Language",
+    "subCategory": "CSS",
+    "level": "medium",
+    "options": [
+      "letter-spacing",
+      "spacing",
+      "text-spacing",
+      "word-spacing"
+    ]
+  },
+  {
+    "questionId": 45,
+    "question": "Which property is used to set the visibility of an element?",
+    "category": "Programming Language",
+    "subCategory": "CSS",
+    "level": "medium",
+    "options": [
+      "visibility",
+      "display",
+      "hidden",
+      "show"
+    ]
+  },
+  {
+    "questionId": 46,
+    "question": "Which property is used to hide an element?",
+    "category": "Programming Language",
+    "subCategory": "CSS",
+    "level": "medium",
+    "options": [
+      "display: none",
+      "visibility: hidden",
+      "hide",
+      "none"
+    ]
+  },
+  {
+    "questionId": 47,
+    "question": "Which property is used to float an element?",
+    "category": "Programming Language",
+    "subCategory": "CSS",
+    "level": "medium",
+    "options": [
+      "float",
+      "position",
+      "align",
+      "move"
+    ]
+  },
+  {
+    "questionId": 48,
+    "question": "Which property is used to position an element?",
+    "category": "Programming Language",
+    "subCategory": "CSS",
+    "level": "medium",
+    "options": [
+      "position",
+      "float",
+      "align",
+      "place"
+    ]
+  },
+  {
+    "questionId": 49,
+    "question": "Which property is used to set the z-index of an element?",
+    "category": "Programming Language",
+    "subCategory": "CSS",
+    "level": "medium",
+    "options": [
+      "z-index",
+      "layer",
+      "depth",
+      "stack"
+    ]
+  },
+  {
+    "questionId": 50,
+    "question": "Which property is used to create a grid layout?",
+    "category": "Programming Language",
+    "subCategory": "CSS",
+    "level": "hard",
+    "options": [
+      "display: grid",
+      "grid-layout",
+      "layout: grid",
+      "grid"
+    ]
+  },
+  {
+    "questionId": 51,
+    "question": "Which property is used to create a flexbox layout?",
+    "category": "Programming Language",
+    "subCategory": "CSS",
+    "level": "hard",
+    "options": [
+      "display: flex",
+      "flex-layout",
+      "layout: flex",
+      "flex"
+    ]
+  },
+  {
+    "questionId": 52,
+    "question": "Which property is used to set the transition effect?",
+    "category": "Programming Language",
+    "subCategory": "CSS",
+    "level": "hard",
+    "options": [
+      "transition",
+      "animation",
+      "effect",
+      "change"
+    ]
+  },
+  {
+    "questionId": 53,
+    "question": "Which property is used to set the animation of an element?",
+    "category": "Programming Language",
+    "subCategory": "CSS",
+    "level": "hard",
+    "options": [
+      "animation",
+      "transition",
+      "effect",
+      "motion"
+    ]
+  },
+  {
+    "questionId": 54,
+    "question": "Which property is used to set the transform of an element?",
+    "category": "Programming Language",
+    "subCategory": "CSS",
+    "level": "hard",
+    "options": [
+      "transform",
+      "change",
+      "rotate",
+      "scale"
+    ]
+  },
+  {
+    "questionId": 55,
+    "question": "Which property is used to set the opacity of an element?",
+    "category": "Programming Language",
+    "subCategory": "CSS",
+    "level": "hard",
+    "options": [
+      "opacity",
+      "visibility",
+      "transparent",
+      "alpha"
+    ]
+  },
+  {
+    "questionId": 56,
+    "question": "Which property is used to set the clip path of an element?",
+    "category": "Programming Language",
+    "subCategory": "CSS",
+    "level": "hard",
+    "options": [
+      "clip-path",
+      "clip",
+      "path",
+      "shape"
+    ]
+  },
+  {
+    "questionId": 57,
+    "question": "Which property is used to set the filter of an element?",
+    "category": "Programming Language",
+    "subCategory": "CSS",
+    "level": "hard",
+    "options": [
+      "filter",
+      "effect",
+      "transform",
+      "style"
+    ]
+  },
+  {
+    "questionId": 58,
+    "question": "Which property is used to set the perspective of an element?",
+    "category": "Programming Language",
+    "subCategory": "CSS",
+    "level": "hard",
+    "options": [
+      "perspective",
+      "depth",
+      "view",
+      "angle"
+    ]
+  },
+  {
+    "questionId": 59,
+    "question": "Which property is used to set the backface visibility?",
+    "category": "Programming Language",
+    "subCategory": "CSS",
+    "level": "hard",
+    "options": [
+      "backface-visibility",
+      "visibility",
+      "back",
+      "face"
+    ]
+  },
+  {
+    "questionId": 60,
+    "question": "What is JavaScript primarily used for?",
+    "category": "Programming Language",
+    "subCategory": "JAVASCRIPT",
+    "level": "easy",
+    "options": [
+      "Web development",
+      "Database management",
+      "Operating systems",
+      "Networking"
+    ]
+  },
+  {
+    "questionId": 61,
+    "question": "Which keyword is used to declare a variable in JavaScript?",
+    "category": "Programming Language",
+    "subCategory": "JAVASCRIPT",
+    "level": "easy",
+    "options": [
+      "var",
+      "int",
+      "let",
+      "const"
+    ]
+  },
+  {
+    "questionId": 62,
+    "question": "Which symbol is used for comments in JavaScript?",
+    "category": "Programming Language",
+    "subCategory": "JAVASCRIPT",
+    "level": "easy",
+    "options": [
+      "//",
+      "#",
+      "--",
+      "/*"
+    ]
+  },
+  {
+    "questionId": 63,
+    "question": "Which method is used to print to the console?",
+    "category": "Programming Language",
+    "subCategory": "JAVASCRIPT",
+    "level": "easy",
+    "options": [
+      "console.log()",
+      "print()",
+      "echo()",
+      "display()"
+    ]
+  },
+  {
+    "questionId": 64,
+    "question": "Which operator is used for addition?",
+    "category": "Programming Language",
+    "subCategory": "JAVASCRIPT",
+    "level": "easy",
+    "options": [
+      "+",
+      "-",
+      "*",
+      "/"
+    ]
+  },
+  {
+    "questionId": 65,
+    "question": "Which operator is used for comparison?",
+    "category": "Programming Language",
+    "subCategory": "JAVASCRIPT",
+    "level": "easy",
+    "options": [
+      "==",
+      "=",
+      "===",
+      "!="
+    ]
+  },
+  {
+    "questionId": 66,
+    "question": "Which keyword is used to define a function?",
+    "category": "Programming Language",
+    "subCategory": "JAVASCRIPT",
+    "level": "easy",
+    "options": [
+      "function",
+      "def",
+      "method",
+      "func"
+    ]
+  },
+  {
+    "questionId": 67,
+    "question": "Which method is used to convert a string to uppercase?",
+    "category": "Programming Language",
+    "subCategory": "JAVASCRIPT",
+    "level": "easy",
+    "options": [
+      "toUpperCase()",
+      "upper()",
+      "uppercase()",
+      "toUpper()"
+    ]
+  },
+  {
+    "questionId": 68,
+    "question": "Which method is used to get the length of a string?",
+    "category": "Programming Language",
+    "subCategory": "JAVASCRIPT",
+    "level": "easy",
+    "options": [
+      "length",
+      "size",
+      "count",
+      "getLength"
+    ]
+  },
+  {
+    "questionId": 69,
+    "question": "Which method is used to add an element to an array?",
+    "category": "Programming Language",
+    "subCategory": "JAVASCRIPT",
+    "level": "easy",
+    "options": [
+      "push()",
+      "add()",
+      "append()",
+      "insert()"
+    ]
+  },
+  {
+    "questionId": 70,
+    "question": "Which keyword is used to declare a constant?",
+    "category": "Programming Language",
+    "subCategory": "JAVASCRIPT",
+    "level": "medium",
+    "options": [
+      "const",
+      "constant",
+      "let",
+      "var"
+    ]
+  },
+  {
+    "questionId": 71,
+    "question": "Which method is used to remove the last element from an array?",
+    "category": "Programming Language",
+    "subCategory": "JAVASCRIPT",
+    "level": "medium",
+    "options": [
+      "pop()",
+      "remove()",
+      "shift()",
+      "splice()"
+    ]
+  },
+  {
+    "questionId": 72,
+    "question": "Which method is used to remove the first element from an array?",
+    "category": "Programming Language",
+    "subCategory": "JAVASCRIPT",
+    "level": "medium",
+    "options": [
+      "shift()",
+      "pop()",
+      "splice()",
+      "remove()"
+    ]
+  },
+  {
+    "questionId": 73,
+    "question": "Which method is used to join array elements into a string?",
+    "category": "Programming Language",
+    "subCategory": "JAVASCRIPT",
+    "level": "medium",
+    "options": [
+      "join()",
+      "concat()",
+      "merge()",
+      "combine()"
+    ]
+  },
+  {
+    "questionId": 74,
+    "question": "Which method is used to sort an array?",
+    "category": "Programming Language",
+    "subCategory": "JAVASCRIPT",
+    "level": "medium",
+    "options": [
+      "sort()",
+      "order()",
+      "arrange()",
+      "sequence()"
+    ]
+  },
+  {
+    "questionId": 75,
+    "question": "Which method is used to reverse an array?",
+    "category": "Programming Language",
+    "subCategory": "JAVASCRIPT",
+    "level": "medium",
+    "options": [
+      "reverse()",
+      "flip()",
+      "invert()",
+      "backward()"
+    ]
+  },
+  {
+    "questionId": 76,
+    "question": "Which method is used to find the index of an element?",
+    "category": "Programming Language",
+    "subCategory": "JAVASCRIPT",
+    "level": "medium",
+    "options": [
+      "indexOf()",
+      "find()",
+      "search()",
+      "position()"
+    ]
+  },
+  {
+    "questionId": 77,
+    "question": "Which method is used to check if an array includes an element?",
+    "category": "Programming Language",
+    "subCategory": "JAVASCRIPT",
+    "level": "medium",
+    "options": [
+      "includes()",
+      "contains()",
+      "has()",
+      "exists()"
+    ]
+  },
+  {
+    "questionId": 78,
+    "question": "Which method is used to slice an array?",
+    "category": "Programming Language",
+    "subCategory": "JAVASCRIPT",
+    "level": "medium",
+    "options": [
+      "slice()",
+      "cut()",
+      "split()",
+      "divide()"
+    ]
+  },
+  {
+    "questionId": 79,
+    "question": "Which method is used to filter an array?",
+    "category": "Programming Language",
+    "subCategory": "JAVASCRIPT",
+    "level": "medium",
+    "options": [
+      "filter()",
+      "select()",
+      "choose()",
+      "extract()"
+    ]
+  },
+  {
+    "questionId": 80,
+    "question": "Which method is used to map an array?",
+    "category": "Programming Language",
+    "subCategory": "JAVASCRIPT",
+    "level": "hard",
+    "options": [
+      "map()",
+      "transform()",
+      "convert()",
+      "loop()"
+    ]
+  },
+  {
+    "questionId": 81,
+    "question": "Which method is used to reduce an array?",
+    "category": "Programming Language",
+    "subCategory": "JAVASCRIPT",
+    "level": "hard",
+    "options": [
+      "reduce()",
+      "sum()",
+      "accumulate()",
+      "combine()"
+    ]
+  },
+  {
+    "questionId": 82,
+    "question": "Which method is used to find an element in an array?",
+    "category": "Programming Language",
+    "subCategory": "JAVASCRIPT",
+    "level": "hard",
+    "options": [
+      "find()",
+      "search()",
+      "locate()",
+      "get()"
+    ]
+  },
+  {
+    "questionId": 83,
+    "question": "Which method is used to check every element in an array?",
+    "category": "Programming Language",
+    "subCategory": "JAVASCRIPT",
+    "level": "hard",
+    "options": [
+      "every()",
+      "all()",
+      "check()",
+      "validate()"
+    ]
+  },
+  {
+    "questionId": 84,
+    "question": "Which method is used to check some elements in an array?",
+    "category": "Programming Language",
+    "subCategory": "JAVASCRIPT",
+    "level": "hard",
+    "options": [
+      "some()",
+      "any()",
+      "check()",
+      "validate()"
+    ]
+  },
+  {
+    "questionId": 85,
+    "question": "Which method is used to bind a function to an object?",
+    "category": "Programming Language",
+    "subCategory": "JAVASCRIPT",
+    "level": "hard",
+    "options": [
+      "bind()",
+      "attach()",
+      "connect()",
+      "link()"
+    ]
+  },
+  {
+    "questionId": 86,
+    "question": "Which method is used to call a function with a given context?",
+    "category": "Programming Language",
+    "subCategory": "JAVASCRIPT",
+    "level": "hard",
+    "options": [
+      "call()",
+      "invoke()",
+      "run()",
+      "execute()"
+    ]
+  },
+  {
+    "questionId": 87,
+    "question": "Which method is used to apply a function with arguments?",
+    "category": "Programming Language",
+    "subCategory": "JAVASCRIPT",
+    "level": "hard",
+    "options": [
+      "apply()",
+      "call()",
+      "bind()",
+      "run()"
+    ]
+  },
+  {
+    "questionId": 88,
+    "question": "Which keyword is used to create a class?",
+    "category": "Programming Language",
+    "subCategory": "JAVASCRIPT",
+    "level": "hard",
+    "options": [
+      "class",
+      "object",
+      "constructor",
+      "define"
+    ]
+  },
+  {
+    "questionId": 89,
+    "question": "Which keyword is used to create an object from a class?",
+    "category": "Programming Language",
+    "subCategory": "JAVASCRIPT",
+    "level": "hard",
+    "options": [
+      "new",
+      "create",
+      "instance",
+      "object"
+    ]
+  }
+]

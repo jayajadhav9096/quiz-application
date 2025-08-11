@@ -1,0 +1,38 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1976d2;
+    /* background-color: gray; */
+    /* Standard Material Blue */
+    color: white;
+    padding: 10px 20px;
+    font-family: 'Segoe UI', sans-serif;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.footer{
+    background-color: #1976d2;
+}
+.navbar-left,
+.navbar-right {
+    display: flex;
+    align-items: center;
+}
+
+.icon {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.title {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.user-name {
+    font-size: 16px;
+    font-weight: 500;
+}
+

@@ -1,0 +1,50 @@
+[
+  {
+    "category": "Programming Language",
+    "subcategories": [
+      "HTML",
+      "CSS",
+      "JAVASCRIPT"
+    ]
+  },
+  {
+    "category": "Current Affairs",
+    "subcategories": [
+      "Politics",
+      "Economy",
+      "International News"
+    ]
+  },
+  {
+    "category": "Sports",
+    "subcategories": [
+      "Cricket",
+      "Olympics"
+    ]
+  },
+  {
+    "category": "Entertainment",
+    "subcategories": [
+      "Hollywood Movies",
+      "Bollywood Movies",
+      "Music"
+    ]
+  },
+  {
+    "category": "Science",
+    "subcategories": [
+      "Physics",
+      "Biology",
+      "Chemistry"
+    ]
+  },
+  {
+    "category": "History",
+    "subcategories": [
+      "Ancient History",
+      "Modern History",
+      "World Wars",
+      "Indian History"
+    ]
+  }
+]
