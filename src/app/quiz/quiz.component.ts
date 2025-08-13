@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, inject, OnDestroy, OnInit } from '@angular/core';
+import { Component, inject, OnDestroy, OnInit, ViewChild } from '@angular/core';
 import { FormArray, FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { Answer, Question } from '../model/question';
 import { QuizService } from '../services/quiz.service';
@@ -8,16 +8,18 @@ import { LoginService } from '../services/login.service';
 import { forkJoin, interval, Subscription } from 'rxjs';
 import { TimerPipe } from '../cutomtimerpipe/timer.pipe';
 import { CanComponentDeactivate } from '../guards/can-deactivate.interface';
-import {  ModalModule } from 'ngx-bootstrap/modal';
+import { QuizModalComponent } from '../quiz-model/quiz-model.component';
 
 @Component({
-  selector: 'qc-quiz',
-  imports: [ReactiveFormsModule, CommonModule, RouterLink, TimerPipe,
-    ModalModule],
+  selector: 'quiz',
+  imports: [ReactiveFormsModule, CommonModule, RouterLink, TimerPipe, QuizModalComponent],
   templateUrl: './quiz.component.html',
   styleUrl: './quiz.component.css'
 })
 export class QuizComponent implements OnInit, OnDestroy, CanComponentDeactivate {
+
+  pendingNavigationResolve: ((value: boolean) => void) | null = null;
+
   protected quizForm = new FormGroup({
     category: new FormControl(),
     subCategory: new FormControl(),
@@ -28,7 +30,10 @@ export class QuizComponent implements OnInit, OnDestroy, CanComponentDeactivate 
   private route = inject(ActivatedRoute);
   private quizService = inject(QuizService);
   private loginService = inject(LoginService);
-  // private modalService = inject(BsModalService);
+
+  modalType: 'unanswered' | 'confirmSubmit' | 'navigateAway' | 'timeUp' | null = null;
+  unansweredCount = 0;
+  @ViewChild(QuizModalComponent) quizModal!: QuizModalComponent;
 
   public currentUserFirstName: string = "";
   public currentQuestionIndex: number = 0;
@@ -40,8 +45,10 @@ export class QuizComponent implements OnInit, OnDestroy, CanComponentDeactivate 
   protected correctAnswer = 0;
   protected incorrectAnswer = 0;
 
+
+
   private LEVEL_TIMES: Record<string, number> = {
-    easy: 60,    // 5 minutes
+    easy: 30,    // 5 minutes
     medium: 600,  // 10 minutes
     hard: 900     // 15 minutes
   };
@@ -54,7 +61,6 @@ export class QuizComponent implements OnInit, OnDestroy, CanComponentDeactivate 
       const category = params['category'];
       const subCategory: string = params['subcategory'];
       const level = params['level'];
-
       this.setQuestionFormArray(category, subCategory, level);
     });
 
@@ -114,9 +120,8 @@ export class QuizComponent implements OnInit, OnDestroy, CanComponentDeactivate 
     this.progress = (((this.currentQuestionIndex + 1) / this.getQuestionsFormArray().length) * 100).toString();
   }
 
-   onCalculateScore() {
+  protected onCalculateScore() {
     this.isQuizCompleted = true;
-
     const values = this.quizForm.getRawValue();
     const questionIdList = values.questions.map(q => q.questionId);
     const questionAnswer$ = this.quizService.getQuestionsAnswerByQuestionIds(questionIdList);
@@ -141,12 +146,9 @@ export class QuizComponent implements OnInit, OnDestroy, CanComponentDeactivate 
       };
       this.isQuizSubmitted = true;
       this.quizService.saveQuiz(quizResult);
-      
-      // await this.modalService.show('Quiz Summary');
     });
 
   }
-
 
   private findAnswerFromAnswerList(questionId: string, answerList: Answer[]) {
     return answerList.find(a => a.questionId == questionId)?.answer || "";
@@ -168,8 +170,14 @@ export class QuizComponent implements OnInit, OnDestroy, CanComponentDeactivate 
         this.timeLeft--;
       } else {
         this.timerSubscription.unsubscribe();
-        this.onCalculateScore();
-        alert('Time is Up!')
+        this.isQuizSubmitted = true;
+        this.modalType = 'timeUp';
+        this.quizModal.showModal();
+        setTimeout(()=>{
+          this.quizModal.close();
+          this.onCalculateScore();
+        },2000)
+
       }
     })
   }
@@ -180,28 +188,50 @@ export class QuizComponent implements OnInit, OnDestroy, CanComponentDeactivate 
     }
   }
 
-  hasSelectedAnswers(): boolean {
-    const array = this.getQuestionsFormArray().value;
-    console.log("hasSelectedAnswers", array);
-    return array.filter((questions: any) => questions.selectedAnswer !== null && questions.selectedAnswer !== '');
-  }
-
-  canDeactivate(): boolean | Promise<boolean> {
-
-    console.log("canDeactivate called. isQuizSubmitted:", this.isQuizSubmitted);
-
+  canDeactivate(): Promise<boolean> | boolean {
     if (this.isQuizSubmitted) {
       return true;
     }
+    return new Promise((resolve) => {
+      this.pendingNavigationResolve = resolve;
+      this.unansweredCount = this.getUnansweredCount();
 
-    if (this.getQuestionsFormArray().untouched) {
-      return confirm('You have not attempt the test,Do you really want to leave?');
-    }
-    if (this.hasSelectedAnswers()) {
-      return confirm('You have not answered all Question. Do you really want to leave?');
-    }
-    return true;
+      this.modalType = 'navigateAway';
+      this.quizModal.showModal();
+    });
   }
-  
 
+  getUnansweredCount(): number {
+    const array = this.getQuestionsFormArray().value;
+    return array.filter((q: { selectedAnswer: any; }) => !q.selectedAnswer).length;
+  }
+
+  handleModalConfirm(): void {
+    if (this.modalType === 'navigateAway') {
+      this.isQuizSubmitted = true;
+      if (this.pendingNavigationResolve) {
+        this.pendingNavigationResolve(true);
+      }
+    } else {
+      this.isQuizSubmitted = true;
+      this.onCalculateScore();
+    }
+    this.modalType = null;
+    this.pendingNavigationResolve = null;
+  }
+
+  confirmNavigationAway(): void {
+    this.modalType = 'navigateAway';
+    this.quizModal.showModal();
+  }
+
+  onSubmit() {
+    this.unansweredCount = this.getUnansweredCount();
+    if (this.unansweredCount > 0) {
+      this.modalType = 'unanswered';
+    } else {
+      this.modalType = 'confirmSubmit';
+    }
+    this.quizModal.showModal();
+  }
 }

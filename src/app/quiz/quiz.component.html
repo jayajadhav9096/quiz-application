@@ -7,7 +7,8 @@
             </div>
             <div class="quiz-header">
                 <h4 style="font-family:cursive">Angular & Typescript Quize!</h4>
-                <span class="font-weight-bold">Welcome!!! <b style="font-family:cursive">{{ currentUserFirstName }}</b></span>
+                <span class="font-weight-bold">Welcome!!! <b style="font-family:cursive">{{ currentUserFirstName
+                        }}</b></span>
             </div>
         </div>
         <ng-container *ngIf="!isQuizCompleted">
@@ -55,9 +56,9 @@
                         Next
                     </button>
 
-                    <button type="submit" class="btn btn-primary" id="next-btn" (click)="onCalculateScore()"
-                        [hidden]="currentQuestionIndex !== getQuestionsFormArray().length-1"
-                        data-bs-toggle="modal" data-bs-target="#confirmModel">
+                    <button type="submit" class="btn btn-primary" id="next-btn" (click)="onSubmit()"
+                        [hidden]="currentQuestionIndex !== getQuestionsFormArray().length-1" data-bs-toggle="modal"
+                        data-bs-target="#confirmModel">
                         submit
                     </button>
                 </div>
@@ -67,28 +68,34 @@
         <ng-container *ngIf="isQuizCompleted">
             <div class="row d-flex justify-content-between p-3">
                 <img src="https://media.istockphoto.com/id/1125716911/vector/party-popper-with-confetti.jpg?s=612x612&w=0&k=20&c=sAyofM-MQ5TL-pLyFseV9Vke_W2zyYX1btP90oGJQZE="
-                 alt="" class="img-fluid col-sm-12 mx-auto" style="width:30%" >
+                    alt="" class="img-fluid col-sm-12 mx-auto" style="width:30%">
                 <div class="result text-center col-md-6 col-sm-12">
                     <h2>Congratulation!!! <br>
                         You have completed the Quiz.<br>
                         Below is you result:
                     </h2>
                     <p>Total Attempted Questions : <b> {{ getQuestionsFormArray().length }}</b></p>
-                    <p>Total Correct Answered : 
+                    <p>Total Correct Answered :
                         <b>{{ correctAnswer}} </b>
                     </p>
-                    <p>Total Wrong Answered : 
-                        <b>{{ incorrectAnswer}}</b> 
+                    <p>Total Wrong Answered :
+                        <b>{{ incorrectAnswer}}</b>
                     </p>
-                    <h4>Your Score : 
+                    <h4>Your Score :
                         <b>{{ score }}</b>
                     </h4>
                 </div>
             </div>
         </ng-container>
-    </div>
-    <div class="container d-flex justify-content-center align-item-center mt-4">
-        <a routerLink="/dashboard" class="btn btn-primary btn-md">Back To Dashboard</a>
-        <a routerLink="/quiz-list" class="btn btn-primary btn-md mx-2" >Quiz list</a>
+        <div class="container d-flex justify-content-center align-item-center mt-4">
+            <a routerLink="/dashboard" class="btn btn-primary btn-md">Back To Dashboard</a>
+            <a routerLink="/quiz-list" class="btn btn-primary btn-md mx-2">Quiz list</a>
+        </div>
     </div>
 </div>
+
+<quiz-model 
+[modalType]="modalType" 
+[unansweredCount]="unansweredCount" 
+(confirm)="handleModalConfirm()">
+</quiz-model>

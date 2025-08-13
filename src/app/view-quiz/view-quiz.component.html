@@ -1,25 +1,33 @@
 <div class="container mt-5 border rounded test-right">
-    <div class="text-center text-success">
+    <div class="text-center text-success mt-2">
         <h3>Review Quiz Result..</h3>
     </div>
-    <div class="card mt2">
-        <div class="d-flex justify-content-between align-item-center p-2">
+    <div class="mt2">
+        <div class="d-flex justify-content-around align-item-center p-2">
             <h4>Category: {{ quiz.category }}</h4>
-            <h4>SubCategory: {{ quiz.subCategory }}</h4>
-            <h4 class="text-danger">Your Score: {{ quiz.score }} </h4>
+            <h4>Sub- Category: {{ quiz.subCategory }}</h4>
+            <h4 class="text-danger">Your Score: {{ quiz.score }}</h4>
         </div>
     </div>
-    <div *ngFor="let question of quiz.questions" class="card mt-3 p-3 form-group">
+    <div *ngFor="let question of quiz.questions" class="h6 mt-3 p-3">
         <h4 class="form-control"><b>{{ question.question}}</b></h4>
         <ul>
-            <li *ngFor="let option of question.options" class="form-control mt-1">
-                <p [class.text-success]='option === question.correctAnswer'
-                    [class.text-danger]='option === question.selectedAnswer && option !== question.correctAnswer'>
+            <li *ngFor="let option of question.options" class="form-control mt-1"
+                [ngClass]="getOptionClasses(option, question)">
+                <p>
                     {{ option }}
                     <span *ngIf="option === question.selectedAnswer"> (Your Answer)</span>
-                    <span *ngIf="option === question.correctAnswer"> <i class='fa fa-check-circle fs-3'></i></span>
                 </p>
             </li>
+            <div *ngIf="!question.selectedAnswer" class="text-danger mt-2">
+                (You did not answered this question.)
+            </div>
         </ul>
     </div>
 </div>
+
+<!-- 
+<quiz
+  [quizForm]="reviewForm"
+  [reviewMode]="true"
+></quiz> -->

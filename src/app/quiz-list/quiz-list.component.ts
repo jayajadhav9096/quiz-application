@@ -3,12 +3,11 @@ import { Component, inject } from '@angular/core';
 import { LoginService } from '../services/login.service';
 import { QuizService } from '../services/quiz.service';
 import { User } from '../model/user';
-import { ActivatedRoute, Data, RouterLink } from '@angular/router';
-import { DashboardComponent } from "../dashboard/dashboard.component";
+import { ActivatedRoute, RouterLink } from '@angular/router';
 
 @Component({
   selector: 'qc-quiz-list',
-  imports: [CommonModule, RouterLink, DashboardComponent],
+  imports: [CommonModule, RouterLink],
   templateUrl: './quiz-list.component.html',
   styleUrl: './quiz-list.component.css'
 })

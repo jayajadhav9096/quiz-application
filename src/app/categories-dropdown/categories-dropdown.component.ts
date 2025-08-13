@@ -3,13 +3,12 @@ import { CategoriesService } from '../services/categories.service';
 import { Category } from '../model/categories';
 import {  CommonModule } from '@angular/common';
 import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
-import { Router, RouterLink, RouterLinkActive, RouterModule } from '@angular/router';
+import { Router } from '@angular/router';
 import {  map } from 'rxjs';
-import { DashboardComponent } from "../dashboard/dashboard.component";
 
 @Component({
   selector: 'qc-categories-dropdown',
-  imports: [CommonModule, FormsModule, ReactiveFormsModule, DashboardComponent],
+  imports: [CommonModule, FormsModule, ReactiveFormsModule],
   templateUrl: './categories-dropdown.component.html',
   styleUrl: './categories-dropdown.component.css'
 })

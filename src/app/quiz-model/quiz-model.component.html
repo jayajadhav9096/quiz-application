@@ -1,0 +1,44 @@
+<div class="modal fade" id="quizModal" tabindex="-1" aria-labelledby="quizModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <h5 class="modal-title" id="quizModalLabel">
+                    {{ modalType === 'unanswered' ? 'Unanswered Questions' :
+                    modalType === 'navigateAway' ? 'Warning' :
+                    modalType === 'timeUp' ? 'Times Up!' :
+                    modalType === 'logout' ? 'Confirm Logout!' :
+                    'Confirm Submission' }}
+                </h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+
+            <div class="modal-body">
+                <ng-container [ngSwitch]="modalType">
+                    <p *ngSwitchCase="'unanswered'">
+                        There are {{ unansweredCount }} unanswered questions. Are you sure you want to submit?
+                    </p>
+                    <p *ngSwitchCase="'navigateAway'">
+                        If you navigate away, you will lose your progress and the quiz will be terminated.
+                    </p>
+                    <p *ngSwitchCase="'confirmSubmit'">
+                        Are you sure you want to submit the quiz?
+                    </p>
+                    <p *ngSwitchCase="'timeUp'">
+                        Your time for this quiz has expired. Your answers have been submitted automatically.
+                    </p>
+                    <p *ngSwitchCase="'logout'">
+                        Are you sure you want to logout?
+                    </p>
+                </ng-container>
+            </div>
+
+            <div class="modal-footer">
+                <button *ngIf="modalType !== 'timeUp'" type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-primary" (click)="onConfirm()">
+                    {{ modalType === 'timeUp' ? 'Ok' : 'Yes' }}
+                </button>
+            </div>
+
+        </div>
+    </div>

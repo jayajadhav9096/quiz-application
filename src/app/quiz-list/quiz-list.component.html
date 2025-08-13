@@ -1,10 +1,12 @@
 <ng-container *ngIf="quizList.length > 0">
     <div class="container mt-4 border rounded">
         <table class="table align-middle mb-0 bg-white caption-top">
-            <caption class="text-center"><h2>ATTEMPTED TEST LIST</h2></caption>
+            <caption class="text-center">
+                <h2>ATTEMPTED TEST LIST</h2>
+            </caption>
             <thead class="bg-light">
                 <tr>
-                    <th>Name</th>
+                    <th *ngIf="currentUser?.role === 'admin'">Name</th>
                     <th>Category | Sub-Category </th>
                     <th>Level</th>
                     <th>Score</th>
@@ -13,15 +15,17 @@
             </thead>
             <tbody>
                 <tr *ngFor="let quiz of quizList">
-                    <td>
-                        <div class="d-flex align-items-center">
-                            <img src="https://mdbootstrap.com/img/new/avatars/8.jpg" alt=""
-                                style="width: 45px; height: 45px" class="rounded-circle" />
-                            <div class="ms-3">
-                                <p class="text-muted mb-0">000{{ quiz.userId }}</p>
-                                <p class="fw-bold mb-1">{{ quiz?.name }}</p>
+                    <td *ngIf="currentUser!.role === 'admin'">
+                        <ng-container >
+                            <div class="d-flex align-items-center">
+                                <img src="https://mdbootstrap.com/img/new/avatars/8.jpg" alt=""
+                                    style="width: 45px; height: 45px" class="rounded-circle" />
+                                <div class="ms-3">
+                                    <p class="text-muted mb-0">000{{ quiz.userId }}</p>
+                                    <p class="fw-bold mb-1">{{ quiz?.name }}</p>
+                                </div>
                             </div>
-                        </div>
+                        </ng-container>
                     </td>
                     <td>
                         <p class="fw-normal mb-1">{{ quiz.category}}</p>
@@ -38,7 +42,8 @@
                             Review Result
                         </button>
                         <button type="button" class="btn btn-sm btn-rounded btn-danger text-center"
-                            (click)="deleteQuizResult(quiz.id)">
+                            (click)="deleteQuizResult(quiz.id)"
+                            *ngIf="currentUser?.role === 'admin'">
                             Delete Result
                         </button>
                     </td>

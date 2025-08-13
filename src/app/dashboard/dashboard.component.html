@@ -3,8 +3,11 @@
     <img
       src="https://media.istockphoto.com/id/1464511713/vector/quiz-logo-isolated-on-white-background.jpg?s=612x612&w=0&k=20&c=VuTteQpXb_5I8jsJ5xCalHk1iPQMX9WsSf_y-qH7kIQ="
       alt="Puzzle Icon" class="icon" />
-    <a [routerLink]="['/dashboard']" routerLinkActive="active current" class="btn title text-light">Quizboard</a>
-    <a [routerLink]="['/quiz-list']" routerLinkActive="active current" class="btn title text-light">My Quizzes</a>
+    <ng-container *ngIf="!isAdmin">
+      <a [routerLink]="['/dashboard']" routerLinkActive="active current" class="btn title text-light">Quizboard</a>
+      <a [routerLink]="['/quiz-list']" routerLinkActive="active current" class="btn title text-light">My Quizzes</a>
+    </ng-container>
+   
     <a [routerLink]="['/user-quiz-list']" routerLinkActive="active current" class="btn title text-light"
       *ngIf="isAdmin">User List</a>
   </div>
@@ -48,4 +51,11 @@
       </div>
     </div>
   </div>
-</footer>l
+</footer>
+
+
+<quiz-model 
+[modalType]="modalType" 
+(confirm)="handleConfirmLogout()"
+>
+</quiz-model>

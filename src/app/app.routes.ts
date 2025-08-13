@@ -22,19 +22,34 @@ export const routes: Routes = [{
     component: DashboardComponent,
     canActivate: [authGuard],
     children: [
-        { path: 'dashboard', component: CategoriesDropdownComponent },
-        { path: 'view/:id', component: ViewQuizComponent },
-        { path: 'quiz-list', component: QuizListComponent },
+        {
+            path: 'dashboard',
+            loadComponent: () => import('./categories-dropdown/categories-dropdown.component')
+                .then(m => m.CategoriesDropdownComponent)
+        },
+        {
+            path: 'view/:id',
+            loadComponent: () => import('./view-quiz/view-quiz.component')
+                .then(m => m.ViewQuizComponent)
+        },
+        {
+            path: 'quiz-list',
+            loadComponent: () => import('./quiz-list/quiz-list.component')
+                .then(m => m.QuizListComponent)
+        },
         {
             path: 'user-quiz-list',
-            component: QuizListComponent,
+            loadComponent: () =>
+                import('./quiz-list/quiz-list.component')
+                    .then((m) => m.QuizListComponent),
             data: { mode: 'admin-view' },
             canActivate: [adminGuard]
         }
     ]
 }, {
     path: 'quiz',
-    component: QuizComponent,
+    loadComponent: ()=>import('./quiz/quiz.component')
+    .then((m=>m.QuizComponent)),
     canActivate: [authGuard],
     canDeactivate: [CanDeactivateGuard]
 }, {
