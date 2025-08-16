@@ -1,0 +1,89 @@
+<div class="conatiner mt-5">
+    <div class="card">
+        <div class="d-flex justify-content-between p3 mt-3">
+            <div class="image">
+                <img src="https://media.istockphoto.com/id/1464511713/vector/quiz-logo-isolated-on-white-background.jpg?s=612x612&w=0&k=20&c=VuTteQpXb_5I8jsJ5xCalHk1iPQMX9WsSf_y-qH7kIQ="
+                    alt="Quiz-Icon" width=130>
+            </div>
+            <div class="quiz-header">
+                <h4 style="font-family:cursive">Angular & Typescript Quize!</h4>
+                <span class="font-weight-bold">Welcome!!! <b style="font-family:cursive">{{ currentUserFirstName
+                        }}</b></span>
+            </div>
+        </div>
+        <div>
+            <ng-content></ng-content>
+        </div>
+
+        <ng-container *ngIf="!isViewMode">
+            <div class="d-flex justify-content-between py-3">
+                <div class="question-remains">
+                    Question {{currentQuestionIndex + 1}} of {{ getQuestionsFormArray().length }}
+                </div>
+                <div class="timer">
+                    <h5> {{ timeLeft | timeformat }} ⏱️</h5>
+                </div>
+            </div>
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" style="width: 25%" [ngStyle]="{'width':progress+'%'}"
+                    aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+                </div>
+            </div>
+        </ng-container>
+
+        <form [formGroup]="quizForm">
+            <div formArrayName="questions" class="Question">
+                <div *ngFor="let questionGroup of getQuestionsFormArray().controls; let i = index">
+                    <ng-container *ngIf="isViewMode || i == currentQuestionIndex">
+                        <div [formGroupName]="i" class="card">
+                            <h5>{{ questionGroup.get('question')?.value }}</h5>
+                            <div class="options" *ngFor="let option of getOptions(i)">
+                                <label *ngIf="!isViewMode">
+                                    <div class="option mt-2"
+                                        [class.selected]="questionGroup.get('selectedAnswer')?.value === option">
+                                        <input type="radio" formControlName="selectedAnswer" [value]="option">
+                                        {{ option }}
+                                    </div>
+                                </label>
+                                <div class="option mt-1" *ngIf="isViewMode"
+                                    [class.correct]="isViewMode && option === questionGroup.get('correctAnswer')?.value"
+                                    [class.incorrect]="isViewMode && option === questionGroup.get('selectedAnswer')?.value && option !== questionGroup.get('correctAnswer')?.value">
+                                    <input type="radio" formControlName="selectedAnswer" [value]="option">
+                                    {{ option }}
+                                    <span *ngIf="isViewMode && option === questionGroup.get('selectedAnswer')?.value">
+                                        <b>(Your Answer)</b></span>
+                                </div>
+                            </div>
+                            <div *ngIf="isViewMode && !questionGroup.get('selectedAnswer')?.value"
+                                class="text-danger mt-2">
+                                <b>(You did not answered this question.)</b>
+                            </div>
+                        </div>
+                    </ng-container>
+                </div>
+            </div>
+
+            <div class="quiz-footer" [hidden]="isViewMode">
+                <button class="btn btn-primary" id="back-btn" (click)="previouseQuestion()"
+                    [disabled]="currentQuestionIndex === 0">
+                    Back
+                </button>
+
+                <button class="btn btn-primary" id="next-btn" (click)="nextQuestion()"
+                    [hidden]="currentQuestionIndex === getQuestionsFormArray().length-1">
+                    Next
+                </button>
+
+                <button type="submit" class="btn btn-primary" id="next-btn" (click)="submit()"
+                    [hidden]="currentQuestionIndex !== getQuestionsFormArray().length-1">
+                    submit
+                </button>
+            </div>
+        </form>
+
+    </div>
+    <div class="container d-flex justify-content-center align-item-center mt-4">
+        <a routerLink="/dashboard" class="btn btn-primary btn-md">Back To Dashboard</a>
+        <a routerLink="/quiz-list" class="btn btn-primary btn-md mx-2">Quiz list</a>
+    </div>
+</div>

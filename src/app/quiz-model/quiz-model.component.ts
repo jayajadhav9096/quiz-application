@@ -10,12 +10,21 @@ import { Modal } from 'bootstrap';
   styleUrls: ['./quiz-model.component.css'],
 })
 export class QuizModalComponent {
-
   @Input() modalType: 'unanswered' | 'confirmSubmit' | 'navigateAway' | 'timeUp' | 'logout' | null = null;
   @Input() unansweredCount = 0;
   @Output() confirm = new EventEmitter<void>();
+  @Output() onHide = new EventEmitter<void>();
 
-  showModal(): void {
+  @Input()
+  public set show(show: boolean){
+    if(show){
+      this.showModal();
+    } else{
+      this.hideModal();
+    }
+  }
+
+  private showModal(): void {
     const modalElement = document.getElementById('quizModal');
     if (modalElement) {
       const modal = new Modal(modalElement);
@@ -29,13 +38,15 @@ export class QuizModalComponent {
     modal?.hide();
   }
 
+  onCancel(){
+    this.onHide.emit();
+  }
+
   onConfirm(): void {
-    this.hideModal();
-    this.confirm.emit();
+    this.confirm.emit();  
   }
 
   close(): void {
     this.hideModal();
   }
 }
-

@@ -1,4 +1,7 @@
-<div class="modal fade" id="quizModal" tabindex="-1" aria-labelledby="quizModalLabel" aria-hidden="true">
+<div class="modal fade" id="quizModal" tabindex="-1"
+data-bs-backdrop="static" data-bs-keyboard="false" 
+aria-labelledby="quizModalLabel" aria-hidden="true"
+>
     <div class="modal-dialog">
         <div class="modal-content">
 
@@ -34,7 +37,9 @@
             </div>
 
             <div class="modal-footer">
-                <button *ngIf="modalType !== 'timeUp'" type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                <button *ngIf="modalType !== 'timeUp'" type="button" class="btn btn-secondary"
+                (click)="onCancel()"
+                >Cancel</button>
                 <button type="button" class="btn btn-primary" (click)="onConfirm()">
                     {{ modalType === 'timeUp' ? 'Ok' : 'Yes' }}
                 </button>

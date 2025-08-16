@@ -1,14 +1,10 @@
 import { Routes } from '@angular/router';
-import { LoginComponent } from './login/login.component';
-import { authGuard } from '../auth-guard/auth.guard';
 import { adminGuard } from '../auth-guard/admin.guard';
+import { authGuard } from '../auth-guard/auth.guard';
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-import { QuizComponent } from './quiz/quiz.component';
-import { QuizListComponent } from './quiz-list/quiz-list.component';
-import { ViewQuizComponent } from './view-quiz/view-quiz.component';
-import { CategoriesDropdownComponent } from './categories-dropdown/categories-dropdown.component';
 import { CanDeactivateGuard } from './guards/can-deactivate.guard';
+import { LoginComponent } from './login/login.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 export const routes: Routes = [{
     path: '',
@@ -47,9 +43,9 @@ export const routes: Routes = [{
         }
     ]
 }, {
-    path: 'quiz',
-    loadComponent: ()=>import('./quiz/quiz.component')
-    .then((m=>m.QuizComponent)),
+    path: 'take-quiz',
+    loadComponent: () => import('./take-quiz/take-quiz.component')
+        .then(m => m.TakeQuizComponent),
     canActivate: [authGuard],
     canDeactivate: [CanDeactivateGuard]
 }, {

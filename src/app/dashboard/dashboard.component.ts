@@ -13,7 +13,7 @@ import { QuizModalComponent } from '../quiz-model/quiz-model.component';
 })
 export class DashboardComponent implements OnInit {
 
-  @ViewChild(QuizModalComponent) quizModal!: QuizModalComponent;
+  showModal = false;
 
 
   currentUserFirstName: string = "";
@@ -38,22 +38,18 @@ export class DashboardComponent implements OnInit {
   
   onLogout(): void {
     this.modalType = 'logout';
-    this.quizModal.showModal();
+    this.showModal = true;
   }
 
   handleConfirmLogout(): void {
+    this.cleanupModal();
     if (this.modalType === 'logout') {
       this.loginService.logout();
-      this.router.navigate(['/login']);
+      setTimeout(() => this.router.navigate(['/login']), 0);
     }
-    this.cleanupModal();
   }
 
   cleanupModal(): void {
-    this.modalType = null;
-    this.quizModal.hideModal();
-
+    this.showModal= false;
   }
-
-
 }

@@ -1,4 +1,4 @@
-<div class="container mt-5 border rounded test-right">
+<!-- <div class="container mt-5 border rounded test-right">
     <div class="text-center text-success mt-2">
         <h3>Review Quiz Result..</h3>
     </div>
@@ -24,10 +24,24 @@
             </div>
         </ul>
     </div>
-</div>
+</div> -->
 
-<!-- 
-<quiz
-  [quizForm]="reviewForm"
-  [reviewMode]="true"
-></quiz> -->
+<quiz-form
+    [category]="category"
+    [subCategory]="subCategory"
+    [level]="level"
+    [questionList]="questionList"
+    [isViewMode]="true" >
+    <div class="review-result-page">
+        <div class="d-flex justify-content-around mt-3" >
+            <h5>Category: {{category}}</h5>
+            <h5>SubCategory: {{subCategory}}</h5>
+            <h5>Quiz Level: {{level}}</h5>
+         </div>
+         <div class="d-flex justify-content-around mt-3" style="font-family:cursive">
+             <h5 class="">Score : {{ score }}</h5>
+             <h5 class="text-success">Correct Qeustions : 0{{ correctQuestion }}</h5>
+             <h5 class="text-danger">Incorrect Question : 0{{ inCorrectQuestion }}</h5>
+         </div>
+    </div>
+</quiz-form>

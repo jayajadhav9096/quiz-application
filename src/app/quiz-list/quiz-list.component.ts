@@ -1,4 +1,4 @@
-import { CommonModule } from '@angular/common';
+import { CommonModule, UpperCasePipe } from '@angular/common';
 import { Component, inject } from '@angular/core';
 import { LoginService } from '../services/login.service';
 import { QuizService } from '../services/quiz.service';
@@ -7,7 +7,7 @@ import { ActivatedRoute, RouterLink } from '@angular/router';
 
 @Component({
   selector: 'qc-quiz-list',
-  imports: [CommonModule, RouterLink],
+  imports: [CommonModule, RouterLink, UpperCasePipe],
   templateUrl: './quiz-list.component.html',
   styleUrl: './quiz-list.component.css'
 })

@@ -28,9 +28,9 @@ export class CategoriesDropdownComponent {
 
   private initForm() {
     this.categoriesForm = this.fb.group({
-      category: ['', Validators.required],
-      subcategory: ['', Validators.required],
-      level: ['', Validators.required]
+      category: ['Programming Language', Validators.required],
+      subcategory: ['CSS', Validators.required],
+      level: ['easy', Validators.required]
     })
   }
 
@@ -47,7 +47,7 @@ export class CategoriesDropdownComponent {
 
   protected startQuizz() {
     const { category, subcategory, level } = this.categoriesForm.value;
-    this.router.navigate(['/quiz'], {
+    this.router.navigate(['/take-quiz'], {
       queryParams: { category, subcategory, level }
     })
     console.log('Start test with:', category, subcategory, level);

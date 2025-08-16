@@ -1,0 +1,62 @@
+<ng-container *ngIf="!showResult">
+    <quiz-form
+        [category]="category" 
+        [subCategory]="subCategory" 
+        [level]="level" 
+        [questionList]="questionList$ | async"
+        (onSubmit)="onQuizSubmit($event)"
+        (onTimeout)="onTimeout($event)"
+        >
+    </quiz-form>
+</ng-container>
+
+<ng-container *ngIf="showResult">
+    <div class="container mt-5">
+        <div class="card">
+            <div class="d-flex justify-content-between p3 mt-3">
+                <div class="image">
+                    <img src="https://media.istockphoto.com/id/1464511713/vector/quiz-logo-isolated-on-white-background.jpg?s=612x612&w=0&k=20&c=VuTteQpXb_5I8jsJ5xCalHk1iPQMX9WsSf_y-qH7kIQ="
+                        alt="Quiz-Icon" width=150>
+                </div>
+                <div class="quiz-header">
+                    <h4 style="font-family:cursive">Angular & Typescript Quize!</h4>
+                    <span class="font-weight-bold"><b style="font-family:cursive">Welcome!!!</b></span>
+                </div>
+            </div>
+            <div class="row d-flex justify-content-between p-3 mt-3">
+                <img src="https://media.istockphoto.com/id/1125716911/vector/party-popper-with-confetti.jpg?s=612x612&w=0&k=20&c=sAyofM-MQ5TL-pLyFseV9Vke_W2zyYX1btP90oGJQZE="
+                    alt="" class="img-fluid col-sm-12 mx-auto" style="width:30%">
+                <div class="result text-center col-md-6 col-sm-12">
+                    <h2>Congratulation!!! <br>
+                        You have completed the Quiz.<br>
+                        Below is you result:
+                    </h2>
+                    <p>Total Attempted Questions : <b> {{ totalQuestionCount }}</b></p>
+                    <p>Total Correct Answered :
+                        <b>{{ correctAnswerCount}} </b>
+                    </p>
+                    <p>Total Wrong Answered :
+                        <b>{{ inCorrectAnswerCount}}</b>
+                    </p>
+                    <h4>Your Score :
+                        <b>{{ score }}</b>
+                    </h4>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- buttons -->
+    <div class="container d-flex justify-content-center align-item-center mt-4">
+        <a routerLink="/dashboard" class="btn btn-primary btn-md">Back To Dashboard</a>
+        <a routerLink="/quiz-list" class="btn btn-primary btn-md mx-2">Quiz list</a>
+    </div>
+</ng-container>
+
+<quiz-model
+[modalType]="modalType"
+[unansweredCount]="unansweredCount"
+(confirm)="onModalConfirm()"
+(onHide)= "onModalHide()"
+[show]="showModel"
+>
+</quiz-model>
